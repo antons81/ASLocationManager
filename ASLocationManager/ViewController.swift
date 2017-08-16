@@ -7,19 +7,35 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let locationManager = ASLocationManager.shared
+
+        locationManager.checkForLocationPermissions(success: { _ in
+            
+            locationManager.delegate = self
+            locationManager.config(kCLLocationAccuracyBestForNavigation)
+            locationManager.startUpdatingLocation()
+        }, failure: { _ in
+            locationManager.showAlert("Cannot determine location")
+        })
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+
+}
+
+extension ViewController: ASLocationManagerDelegate {
+    
+    func didUpdateLocation(lat: Double, lon: Double) {
+        debugPrint("lat: \(lat) lon: \(lon)")
     }
-
-
 }
 

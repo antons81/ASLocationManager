@@ -12,6 +12,8 @@
 		1EFBA9071F4449E400AB1F49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFBA9051F4449E400AB1F49 /* Main.storyboard */; };
 		1EFBA9091F4449E400AB1F49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EFBA9081F4449E400AB1F49 /* Assets.xcassets */; };
 		1EFBA90C1F4449E400AB1F49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFBA90A1F4449E400AB1F49 /* LaunchScreen.storyboard */; };
+		1EFBA9141F444A0900AB1F49 /* ASLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBA9131F444A0900AB1F49 /* ASLocationManager.swift */; };
+		1EFBA9161F44501F00AB1F49 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBA9151F44501F00AB1F49 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		1EFBA9081F4449E400AB1F49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EFBA90B1F4449E400AB1F49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EFBA90D1F4449E400AB1F49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EFBA9131F444A0900AB1F49 /* ASLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASLocationManager.swift; sourceTree = "<group>"; };
+		1EFBA9151F44501F00AB1F49 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				1EFBA9011F4449E400AB1F49 /* AppDelegate.swift */,
 				1EFBA9031F4449E400AB1F49 /* ViewController.swift */,
+				1EFBA9131F444A0900AB1F49 /* ASLocationManager.swift */,
+				1EFBA9151F44501F00AB1F49 /* Extensions.swift */,
 				1EFBA9051F4449E400AB1F49 /* Main.storyboard */,
 				1EFBA9081F4449E400AB1F49 /* Assets.xcassets */,
 				1EFBA90A1F4449E400AB1F49 /* LaunchScreen.storyboard */,
@@ -98,6 +104,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = S9676DF7C4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,7 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EFBA9041F4449E400AB1F49 /* ViewController.swift in Sources */,
+				1EFBA9141F444A0900AB1F49 /* ASLocationManager.swift in Sources */,
 				1EFBA9021F4449E400AB1F49 /* AppDelegate.swift in Sources */,
+				1EFBA9161F44501F00AB1F49 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -249,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -263,6 +276,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S9676DF7C4;
 				INFOPLIST_FILE = ASLocationManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aSoft.ASLocationManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S9676DF7C4;
 				INFOPLIST_FILE = ASLocationManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aSoft.ASLocationManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
