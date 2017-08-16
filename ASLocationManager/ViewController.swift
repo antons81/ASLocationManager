@@ -21,6 +21,7 @@ class ViewController: UIViewController {
             locationManager.delegate = self
             locationManager.config(kCLLocationAccuracyBest)
             locationManager.startUpdatingLocation()
+            
         }, failure: { _ in
             locationManager.showAlert("Cannot determine location")
         })  
