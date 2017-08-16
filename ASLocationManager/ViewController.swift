@@ -23,13 +23,8 @@ class ViewController: UIViewController {
             locationManager.startUpdatingLocation()
         }, failure: { _ in
             locationManager.showAlert("Cannot determine location")
-        })
-        
-        
+        })  
     }
-
-   
-
 }
 
 extension ViewController: ASLocationManagerDelegate {
