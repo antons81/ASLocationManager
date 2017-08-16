@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         locationManager.checkForLocationPermissions(success: { _ in
             
             locationManager.delegate = self
-            locationManager.config(kCLLocationAccuracyBestForNavigation)
+            locationManager.config(kCLLocationAccuracyBest)
             locationManager.startUpdatingLocation()
         }, failure: { _ in
             locationManager.showAlert("Cannot determine location")
