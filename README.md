@@ -1,0 +1,2 @@
+# ASLocationManager
+Location Manager singleton 
