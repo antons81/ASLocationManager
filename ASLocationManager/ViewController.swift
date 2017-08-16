@@ -31,6 +31,7 @@ class ViewController: UIViewController {
 extension ViewController: ASLocationManagerDelegate {
     
     func didUpdateLocation(lat: Double, lon: Double) {
+        
         debugPrint("lat: \(lat) lon: \(lon)")
     }
 }
