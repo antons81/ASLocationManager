@@ -11,7 +11,7 @@ import CoreLocation
 
 protocol ASLocationManagerDelegate: class {
     
-    func didUpdateLocation(lat: Double, lon: Double)
+    func didUpdateLocation(_ location: CLLocation)
 }
 
 
@@ -46,12 +46,11 @@ open class ASLocationManager: NSObject {
         locationManager.stopMonitoringSignificantLocationChanges()
     }
     
-    public func checkForLocationPermissions(success:(_ result: Bool) -> Void, failure: @escaping (_ result: Error) -> Void)  {
+    public func checkForLocationPermissions(success:(_ result: Bool) -> Void)  {
         
         switch CLLocationManager.authorizationStatus() {
         case .restricted, .denied:
             
-            failure(false as! Error)
             DispatchQueue.main.async {
                 self.alertWithLocationSettings("Location service has been restricted or denied, please open Settings to allow using location")
             }
@@ -75,7 +74,7 @@ extension ASLocationManager: CLLocationManagerDelegate {
     
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        delegate?.didUpdateLocation(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
+        delegate?.didUpdateLocation(location)
     }
 }
 

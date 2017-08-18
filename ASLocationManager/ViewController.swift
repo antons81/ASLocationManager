@@ -15,24 +15,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let locationManager = ASLocationManager.shared
-
         locationManager.checkForLocationPermissions(success: { _ in
             
             locationManager.delegate = self
             locationManager.config(kCLLocationAccuracyBest)
             locationManager.startUpdatingLocation()
-            
-        }, failure: { _ in
-            locationManager.showAlert("Cannot determine location")
-        })  
+        })
     }
 }
 
 extension ViewController: ASLocationManagerDelegate {
     
-    func didUpdateLocation(lat: Double, lon: Double) {
-        
-        debugPrint("lat: \(lat) lon: \(lon)")
+    func didUpdateLocation(_ location: CLLocation) {
+        debugPrint("lacation: \(location)")
     }
 }
 
